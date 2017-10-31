@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-firebase-performance-ka",
+  "version": "1.0.0",
+  "description": "Firebase Performance Plugin",
+  "cordova": {
+    "id": "cordova-plugin-firebase-performance-ka",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanodeveloper/cordova-plugin-firebase-performance.git"
+  },
+  "author": "Kano Developer",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "keywords": [
+
+  ]
+}
