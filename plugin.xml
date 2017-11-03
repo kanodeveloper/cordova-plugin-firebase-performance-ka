@@ -1,7 +1,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
            id="cordova-plugin-firebase-performance-ka"
-      version="1.0.0">
+      version="1.0.1">
 
     <name>cordova-plugin-firebase-performance-ka</name>
     <description>Cordova plugin for Firebase Performance</description>
@@ -9,6 +9,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <keywords>cordova</keywords>
     <repo>https://github.com/kanodeveloper/cordova-plugin-firebase-performance-ka</repo>
     <issue>https://github.com/kanodeveloper/cordova-plugin-firebase-performance-ka/issues</issue>
+
+    <js-module src="www/FirebasePerformance.js" name="FirebasePerformance">
+        <merges target="cordova.plugins.firebase.perf" />
+    </js-module>
 
     <engines>
         <engine name="cordova" version=">=6.0.0"/>
@@ -18,16 +22,25 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
     <platform name="ios">
 
+        <config-file target="config.xml" parent="/*">
+            <feature name="FirebasePerformance">
+                <param name="ios-package" value="FirebasePerformancePlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/FirebasePerformancePlugin.h" />
+        <source-file src="src/ios/FirebasePerformancePlugin.m" />
+
         <framework src="Firebase/Performance" type="podspec" spec="~> 4.1"/>
 
     </platform>
 
     <platform name="android">
 
-
         <framework src="com.google.firebase:firebase-perf:11.4.+" />
 
-        <framework src="build.gradle" custom="true" type="gradleReference" />
+        <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
 
     </platform>
 
