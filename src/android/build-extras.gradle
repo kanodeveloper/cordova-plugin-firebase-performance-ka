@@ -1,9 +1,0 @@
-buildscript {
-    repositories {
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'com.google.firebase:firebase-plugins:1.1.2'
-    }
-}
