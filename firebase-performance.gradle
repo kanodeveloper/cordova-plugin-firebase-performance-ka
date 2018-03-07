@@ -13,5 +13,5 @@ repositories {
     }
 }
 
-apply plugin: com.google.firebase.perf.FirebasePerformance
+//apply plugin: com.google.firebase.perf.FirebasePerformance
 //com.google.firebase.firebase-perf

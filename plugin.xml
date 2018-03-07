@@ -1,7 +1,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
       id="cordova-plugin-firebase-performance-ka"
-      version="1.0.6">
+      version="1.0.8">
 
     <name>cordova-plugin-firebase-performance-ka</name>
     <description>Cordova plugin for Firebase Performance</description>
@@ -19,7 +19,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <engine name="cordova-android" version=">=6.0.0"/>
         <engine name="cordova-ios" version=">=4.3.0"/>
     </engines>
-
 
     <hook type="after_plugin_install" src="hooks/after_plugin_add.js" />
     <hook type="after_platform_add" src="hooks/after_plugin_add.js" />
@@ -45,7 +44,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
         <preference name="ANDROID_API_VERSION" default="11.8.0"/>
 
-        <framework src="firebase-performance.gradle" custom="true" type="gradleReference"/>
+        <!--<framework src="firebase-performance.gradle" custom="true" type="gradleReference"/>-->
 
         <framework src="com.google.firebase:firebase-perf:$ANDROID_API_VERSION" />
 
