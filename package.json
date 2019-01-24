@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-firebase-performance-ka",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Firebase Performance Plugin",
   "cordova": {
     "id": "cordova-plugin-firebase-performance-ka",
