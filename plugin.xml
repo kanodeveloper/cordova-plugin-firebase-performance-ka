@@ -14,6 +14,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <merges target="cordova.plugins.firebase.perf" />
     </js-module>
 
+    <hook type="after_plugin_install" src="hooks/after_plugin_add.js" />
+    <hook type="after_platform_add" src="hooks/after_plugin_add.js" />
+    <hook type="before_plugin_uninstall" src="hooks/before_plugin_rm.js" />
+
     <engines>
         <engine name="cordova" version=">=6.0.0"/>
         <engine name="cordova-android" version=">=6.0.0"/>
@@ -32,7 +36,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <header-file src="src/ios/FirebasePerformancePlugin.h" />
         <source-file src="src/ios/FirebasePerformancePlugin.m" />
 
-        <framework src="Firebase/Performance" type="podspec" spec="~> 4.1"/>
+        <framework src="Firebase/Performance" type="podspec" spec="~> 5.0"/>
 
     </platform>
 
