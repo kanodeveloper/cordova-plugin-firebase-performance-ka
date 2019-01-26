@@ -1,7 +1,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
       id="cordova-plugin-firebase-performance-ka"
-      version="1.0.11">
+      version="1.0.12">
 
     <name>cordova-plugin-firebase-performance-ka</name>
     <description>Cordova plugin for Firebase Performance</description>
