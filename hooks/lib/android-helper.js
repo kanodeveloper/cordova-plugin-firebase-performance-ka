@@ -18,7 +18,7 @@ module.exports = {
             "        jcenter()",
             "    }",
             "    dependencies {",
-            "        classpath 'com.google.firebase:firebase-plugins:1.+'",
+            "        classpath 'com.google.firebase:firebase-plugins:1.1+'",
             "    }",
             "}",
             "",
