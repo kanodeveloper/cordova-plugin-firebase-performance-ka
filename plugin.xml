@@ -1,7 +1,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
       id="cordova-plugin-firebase-performance-ka"
-      version="1.1.0">
+      version="1.2.0">
 
     <name>cordova-plugin-firebase-performance-ka</name>
     <description>Cordova plugin for Firebase Performance</description>
@@ -11,7 +11,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <issue>https://github.com/kanodeveloper/cordova-plugin-firebase-performance-ka/issues</issue>
 
     <js-module src="www/FirebasePerformance.js" name="FirebasePerformance">
-        <merges target="cordova.plugins.firebase.perf" />
+        <merges target="cordova.plugins.firebase.performance" />
     </js-module>
 
     <hook type="after_plugin_install" src="hooks/after_plugin_add.js" />
@@ -51,6 +51,13 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
         <preference name="ANDROID_API_VERSION" default="11.8.0"/>
 
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FirebasePerformance">
+                <param name="android-package" value="com.kanoapps.cordova.firebase.FirebasePerformancePlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.INTERNET" />
         </config-file>
@@ -62,6 +69,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <dependency id="cordova-plugin-google-services-ka" version="~1.0.0"/>
 
         <framework src="com.google.firebase:firebase-perf:$ANDROID_API_VERSION" />
+
+        <source-file src="src/android/FirebasePerformancePlugin.java" target-dir="src/com/kanoapps/cordova/firebase" />
 
     </platform>
 

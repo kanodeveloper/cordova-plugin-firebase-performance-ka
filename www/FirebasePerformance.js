@@ -2,10 +2,10 @@ var exec = require("cordova/exec");
 var PLUGIN_NAME = "FirebasePerformance";
 
 module.exports = {
-    startTrace: function(success, error) {
-        exec(success, error, PLUGIN_NAME, "startTrace", []);
+    startTrace: function(key, success, error) {
+        exec(success, error, PLUGIN_NAME, "startTrace", [key]);
     },
-    stopTrace: function(success, error) {
-        exec(success, error, PLUGIN_NAME, "stopTrace", []);
+    stopTrace: function(key, success, error) {
+        exec(success, error, PLUGIN_NAME, "stopTrace", [key]);
     }
 };
